@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #800606;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: #3298dc;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+
+@import "../node_modules/bulma/bulma";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Sansita+Swashed&display=swap");
+
+$divider-margin-size: 2px 20%;
+@import "../node_modules/@creativebulma/bulma-divider/src/sass/index";
+
+.bg-image {
+  /* The image used */
+  // background-image: url("../4.jpg");
+  //   filter: blur(5px);
+
+  /* Add the blur effect */
+  transition: all 1s ease-in-out;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backdrop {
+  backdrop-filter: blur(15px);
+  background-color: #fff5;
+  color: black;
+}
+
+.modal-content {
+  background-color: #fff;
+}
+.notification {
+  padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+}
+.shadow {
+  box-shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.1),
+    0 0px 0 1px rgba($scheme-invert, 0.02);
+}
+
+body {
+  font-size: 1.15em;
+  font-family: "Montserrat", sans-serif;
+}
+p {
+  font-family: "Roboto", sans-serif;
+}
+.service-list p:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.navbar {
+  transition: all 2s ease-in-out 1s;
+  // background-color:#3298dcc7 !important;
+  .logo-title {
+    font-family: "Courgette", cursive;
+    font-size: 1.4em;
+    transition: all ease-in-out 0.5s;
+    visibility: "none";
+    opacity: 0;
+  }
+  .navbar-burger {
+    height: auto;
+  }
+  .navbar-logo {
+    visibility: "none";
+    transition: all ease-in-out 0.5s;
+    opacity: 0;
+  }
+}
+
+.doc-hero {
+  .title {
+    font-size: 4em;
+    font-family: "Courgette", cursive;
+  }
+  .hero-body {
+    padding-bottom: 2rem;
+  }
+}
+#wave path {
+  fill: #fff;
+}
+
+.logo {
+  width: 188px;
+  position: absolute;
+  right: calc(50% + 148px);
+  top: -53px;
+}
+
+//Mobile
+@media screen and (max-width: $tablet - 1px) {
+  .logo {
+    width: 100px;
+    position: absolute;
+    right: calc(50% + 72px);
+    top: -31px;
+  }
+  .navbar {
+    .logo-title {
+      // max-width: 100%;
+      // font-size: 1.7em;
+      // margin: auto;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .navbar {
+    .logo-title {
+      font-size: 100%;
+    }
+  }
+}
+
+//Desktop
+@media screen and (min-width: $tablet), print {
+  .doc-hero .hero-body {
+    padding-bottom: 3rem !important;
+  }
+}
+
+.doc-pic {
+  width: 200px;
+  height: 200px;
+  margin: 4px auto !important;
+  border-radius: 50%;
+  background-position-x: 40%;
+  background-size: cover;
+  padding: 4px;
+  border: solid 3px;
+  border-color: inherit;
+}
