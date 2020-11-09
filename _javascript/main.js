@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //Create splide
   var slideCon = document.getElementById("slideshow").getElementsByClassName("splide__list")[0]
-  for (let a = 2; a <= 7; a++) {
+  for (let a = 2; a <= 8; a++) {
     let slide = slideCon.getElementsByClassName("splide__slide")[0].cloneNode(true);
-    slide.getElementsByTagName("img")[0].src = `${a}.webp`
+    slide.getElementsByTagName("img")[0].src = `img/${a}.webp`
     slideCon.appendChild(slide)
   }
 
