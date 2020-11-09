@@ -55,10 +55,10 @@
       </div>
       <div id="navbarMenuHeroA" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item" href="#studio">
+          <a class="navbar-item" href="#ser">
             Servizi
           </a>
-          <a class="navbar-item" href="#studio">
+          <a class="navbar-item" href="#cont">
             Contatti
           </a>
           <a class="navbar-item" href="#doc">
@@ -87,14 +87,26 @@
       </path>
     </svg>
   </section>
-  <section class="section bg-image has-text-centered" id="studio">
-    <h2 style="color:#3298DC" class="is-primary title has-text-centered">Studio medico</h2>
-    <img class="has-text-centered" src="logo-tr.svg" style="width: 10%;">
+  <section class="section bg-image" id="studio">
+    <h1 style="color:#3298DC; font-size: 3rem;" class="is-primary title has-text-centered">Studio medico</h1>
+    <img class="" src="logo-tr.svg" style="width:200px; display: block; margin: auto;">
     <div class="container">
       <div class="columns">
         <div class="column">
-          <div class="notification is-primary is-light shadow">
+          <div class="notification is-primary is-light shadow" id="ser">
+            <!-- <div class="noti-image">
+              Helo
+            </div> -->
+            <!-- <figure style="background-image: url(ser.png);" class="doc-pic">
+            </figure> -->
             <div class="content service-list has-text-centered">
+              <figure style="background-image: url(ser.png);
+              background-position-x: -8%;
+              background-position-y: 66%;
+              background-size: 121%;
+              background-color: white;
+              background-repeat: no-repeat;" class="doc-pic">
+              </figure>
               <h3 style="color: inherit">Servizi</h3>
 
               <p>Visita Cardiologica + Elettrocardiogramma</p>
@@ -134,9 +146,11 @@
           </div>
         </div>
         <div class="column">
-          <div class="notification is-primary is-light shadow">
+          <div class="notification is-primary is-light shadow" id="cont">
             <div class="content">
-              <h3 style="color: inherit">Contatti</h3>
+              <figure style="background-image: url(cont.jpg);" class="doc-pic">
+              </figure>
+              <h3 style="color: inherit" class="has-text-centered">Contatti</h3>
               <p class="is-vcentered">
                 📞Telefono: <a href="tel:+39 347 296 7783">+39 347 296 7783</a>
                 </br>
@@ -191,8 +205,12 @@
                 di Emergenza-Urgenza, PS Policlinico di Catania.</p>
             </div>
             <div class="notification is-info is-light shadow">
+              <figure style="    background-image: url(stu.jpg);
+              background-position-x: 49%;
+              background-position-y: 1%;
+              background-size: 121%;
+              background-repeat: no-repeat;" class="doc-pic"></figure>
               <h3 class="has-text-centered" style="color: inherit">Studi</h3>
-
               <p><strong>Laurea in Medicina e Chirurgia</strong> con 110/110 e lode, presso l'Università degli studi di
                 Catania</p>
               <p><strong>Iscritto all'Albo dell'Ordine dei Medici</strong> della provincia di Catania</p>
@@ -202,12 +220,19 @@
                 Catania
                 con 70/70 e la lode</p>
             </div>
+            <img style="display: block; margin: auto;" src="fill.jpg">
           </div>
         </div>
 
         <div class="column">
           <div class="is-warning notification is-light shadow">
             <div class="content">
+              <figure style="background-image: url(carr.png);
+              background-position-x: 49%;
+              background-position-y: 95%;
+              background-size: 121%;
+              background-repeat: no-repeat;" class="doc-pic">
+              </figure>
               <h3 class="has-text-centered" style="color: inherit">Carriera</h3>
               <p><strong>Responsabile Scientifico e Direttore </strong> per i Corsi di Rianimazione Cardiopolmonare e
                 'Linee
@@ -258,24 +283,32 @@
       </div>
     </div>
   </section>
-
-  <footer class="footer has-text-centered">
+  <div style="background-image: url(pace.jpg);" class="peace">
+    <p>PACE</p>
+  </div>
+  <footer class="footer">
     <div class="container">
       <div class="columns">
         <div class="column is-8-desktop is-offset-2-desktop">
-          <p>
-            <q>
-              Possono accadere miracoli se diamo ai nostri sogni la stessa energia che diamo alle nostre paure
-            </q>
-          </p>
-          <p style="margin-top: 1rem;">
-            <a href="http://bulma.io">
-              <img src="made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
-            </a>
-          </p>
-          <p>
-            Made with ❤️ by Guido Bordonaro
-          </p>
+
+          <div class="blockquote">
+            <h1>
+              Possono accadere <span>miracoli</span> se diamo ai nostri <span>sogni</span> la stessa energia che diamo
+              alle nostre paure.
+            </h1>
+            <h4>&mdash;Da scritta su muro<br><em>Alessandro Carbonaro</em></h4>
+
+          </div>
+          <div class="content has-text-centered">
+            <p style="margin-top: 1rem;">
+              <a href="http://bulma.io">
+                <img src="made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+              </a>
+            </p>
+            <p>
+              Made with ❤️ by Guido Bordonaro
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -8,19 +8,12 @@
 // 1. Import the initial variables
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
-// 2. Set your own initial variables
-// Update the blue shade, used for links
-$blue: #800606;
-// Add pink and its invert
-$pink: #ff8080;
-$pink-invert: #fff;
+
 // Update the sans-serif font family
 $family-sans-serif: "Helvetica", "Arial", sans-serif;
 
-// 3. Set the derived variables
-// Use the new pink as the primary color
 $primary: #3298dc;
-$primary-invert: $pink-invert;
+// $primary-invert: $pink-invert;
 
 // 4. Import the rest of Bulma
 
@@ -116,6 +109,117 @@ p {
   top: -53px;
 }
 
+.doc-pic {
+  width: 200px;
+  height: 200px;
+  margin: 4px auto !important;
+  border-radius: 50%;
+  background-position-x: 40%;
+  background-size: cover;
+  padding: 4px;
+  border: solid 3px;
+  border-color: inherit;
+}
+
+.content h3:not(:first-child) {
+  margin-top: 0.5em;
+  font-size: 2.5rem;
+}
+
+.peace {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 400px;
+  width: 50%;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: white;
+    font-weight: bold;
+    font-size: 5rem;
+    vertical-align: middle;
+  }
+}
+
+///////////Quote//////////////
+
+.blockquote {
+  position: relative;
+  font-family: "Courgette", cursive;
+  max-width: 620px;
+  margin: 30px auto;
+  align-self: center;
+
+  span {
+    color: $primary;
+  }
+  /* Blockquote header */
+
+  h1 {
+    // font-family: 'Abril Fatface', cursive;
+    position: relative; /* for pseudos */
+    color: inherit;
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0;
+    // border: 2px solid #fff;
+    border: solid 2px $primary;
+    border-radius: 20px;
+    padding: 25px;
+  }
+
+  /* Blockquote right double quotes */
+  h1:after {
+    content: "";
+    position: absolute;
+    border: 2px solid $primary;
+    border-radius: 0 50px 0 0;
+    width: 60px;
+    height: 60px;
+    bottom: -60px;
+    left: 50px;
+    border-bottom: none;
+    border-left: none;
+    z-index: 3;
+  }
+  h1:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    color: inherit;
+    border: 6px solid #fafafa;
+    bottom: -3px;
+    left: 50px;
+    z-index: 2;
+  }
+
+  /* Blockquote subheader */
+  h4 {
+    position: relative;
+    // color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 1;
+    margin-left: 150px;
+    padding-left: 12px;
+  }
+
+  h4:first-letter {
+    margin-left: -12px;
+  }
+}
+
 //Mobile
 @media screen and (max-width: $tablet - 1px) {
   .logo {
@@ -129,6 +233,11 @@ p {
       // max-width: 100%;
       // font-size: 1.7em;
       // margin: auto;
+    }
+  }
+  .blockquote {
+    h1 {
+      font-size: 2rem;
     }
   }
 }
@@ -145,16 +254,4 @@ p {
   .doc-hero .hero-body {
     padding-bottom: 3rem !important;
   }
-}
-
-.doc-pic {
-  width: 200px;
-  height: 200px;
-  margin: 4px auto !important;
-  border-radius: 50%;
-  background-position-x: 40%;
-  background-size: cover;
-  padding: 4px;
-  border: solid 3px;
-  border-color: inherit;
 }
